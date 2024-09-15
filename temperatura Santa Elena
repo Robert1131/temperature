@@ -1,0 +1,20 @@
+# Definir la matriz 3D de temperaturas: Santa Elena, días de la semana, semanas
+# Ejemplo: 1 ciudad (Santa Elena), 7 días de la semana, 3 semanas
+temperaturas = [
+    # Ciudad: Santa Elena
+    [
+        # Semana 1
+        [25, 26, 27, 24, 23, 28, 29],  # Lunes a Domingo
+        # Semana 2
+        [24, 25, 26, 23, 22, 27, 28],
+        # Semana 3
+        [23, 24, 25, 22, 21, 26, 27]
+    ]
+]
+
+# Calcular y mostrar el promedio de temperaturas para Santa Elena por semana
+for ciudad_idx, ciudad in enumerate(temperaturas):
+    print(f"Ciudad {ciudad_idx + 1}: Santa Elena")
+    for semana_idx, semana in enumerate(ciudad):
+        promedio_semana = sum(semana) / len(semana)
+        print(f"  Semana {semana_idx + 1}: Promedio de temperatura = {promedio_semana:.2f}°C")
